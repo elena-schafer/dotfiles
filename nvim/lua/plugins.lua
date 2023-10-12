@@ -29,4 +29,5 @@ require("lazy").setup({
 	"windwp/nvim-autopairs",
 	"lewis6991/gitsigns.nvim",
 	"voldikss/vim-floaterm",
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", },
 })
