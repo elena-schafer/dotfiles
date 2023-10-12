@@ -1,3 +1,5 @@
+vim.wo.number = true
+
 require('plugins')
 require('mason-config')
 require('jdtls')
