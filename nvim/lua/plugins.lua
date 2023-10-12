@@ -30,4 +30,5 @@ require("lazy").setup({
 	"lewis6991/gitsigns.nvim",
 	"voldikss/vim-floaterm",
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", },
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 })
