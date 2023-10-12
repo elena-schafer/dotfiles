@@ -27,5 +27,6 @@ require("lazy").setup({
 	{"akinsho/bufferline.nvim", dependencies = "nvim-tree/nvim-web-devicons"},
 	"nvim-lualine/lualine.nvim",
 	"windwp/nvim-autopairs",
-	"lewis6991/gitsigns.nvim"
+	"lewis6991/gitsigns.nvim",
+	"voldikss/vim-floaterm",
 })
