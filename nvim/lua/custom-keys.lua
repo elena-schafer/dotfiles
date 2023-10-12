@@ -8,7 +8,7 @@ map('n', '[b', [[:BufferLineCyclePrev<CR>]], {})
 map('n', ']b', [[:BufferLineCycleNext<CR>]], {})
 
 --floaterm keybinds
-map('n', '<F5>', [[:FloatermNew<CR>]], {})
-map('n', '<F6>', [[:FloatermToggle<CR>]], {})
-map('n', '<F7>', [[:FloatermNext<CR>]], {})
-map('n', '<F8>', [[:FloatermPrev<CR>]], {})
+map('n', '<leader>ft', [[:FloatermNew<CR>]], {})
+map('n', '<leader>t', [[:FloatermToggle<CR>]], {})
+--map('n', '<M->', [[:FloatermNext<CR>]], {})
+--map('n', '<M->', [[:FloatermPrev<CR>]], {})
