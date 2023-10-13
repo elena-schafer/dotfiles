@@ -31,4 +31,5 @@ require("lazy").setup({
 	"voldikss/vim-floaterm",
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", },
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 })
