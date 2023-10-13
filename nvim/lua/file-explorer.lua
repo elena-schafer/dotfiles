@@ -36,13 +36,21 @@ vim.api.nvim_create_autocmd({ "TabNew" }, { callback = open_nvim_tree })
 
 -- Setup nvim-tree window auto closing when all buffers in tab are closed
 local function close_nvim_tree_on_exit(data)
+
+	-- determine if we should close nvim-tree here
+	-- If no other buffers are active, and none are modified, we close
+	local should_close = 1
+	local buffers = vim.fn.getbufinfo()
+	for i=1,#buffers,1 do
+		if buffers[i].hidden == 0 or buffers[i].changed == 1 then
+			should_close = 0
+			break
+		end
+	end
   
-  if require("nvim-tree.api").tree.is_visible() and #vim.api.nvim_tabpage_list_wins(0) == 2 then
-    require("nvim-tree.api").tree.close_in_this_tab()
-  end
+	if require("nvim-tree.api").tree.is_visible() and should_close then
+		require("nvim-tree.api").tree.close_in_this_tab()
+	end
 end
 
 vim.api.nvim_create_autocmd({ "QuitPre" }, { callback = close_nvim_tree_on_exit })
-
---nvim-tree-api.events.subscribe("FlieCreated", { callback = })
---tree.reload()
