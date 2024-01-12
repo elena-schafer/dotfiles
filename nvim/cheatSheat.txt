@@ -1,0 +1,31 @@
+Window Switching
+------------------------------
+Next Window: C-ww
+Window Movement: C-w(hjkl)
+
+NVimTree
+------------------------------
+Toggle Tree: C-n
+Help: g?
+
+Tabs
+------------------------------
+Buffer Prev: [b
+Buffer Next: ]b
+Buffer Close: \q
+
+FloaTerm
+------------------------------
+New Terminal: \ft
+Terminal Toggle: \t
+Close Terminal: C-d
+
+Telescope
+------------------------------
+File Name Search: \ff
+Live Grep: \fg
+Search Buffers: \fb
+Search Help: \fh
+Close: C-c (insert), <Esc> (normal mode)
+Next Item: C-n, <Down>
+Prev Item: C-p, <Up>
