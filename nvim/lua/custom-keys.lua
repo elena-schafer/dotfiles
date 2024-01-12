@@ -6,6 +6,9 @@ map('n', '<C-n>', [[:NvimTreeToggle<CR>]], {})
 --BufferLine keybinds
 map('n', '[b', [[:BufferLineCyclePrev<CR>]], {})
 map('n', ']b', [[:BufferLineCycleNext<CR>]], {})
+map('n', '<leader>bp', [[:BufferLineTogglePin<CR>]], {})
+map('n', '<leader>q', [[:e#<bar>bd #<CR>]], {}) --change to more complex function to allow closing nvim when all edit buffers are closed
+						--currently just reopens the alternative file
 
 --floaterm keybinds
 map('n', '<leader>ft', [[:FloatermNew<CR>]], {})
