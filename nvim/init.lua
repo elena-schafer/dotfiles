@@ -2,7 +2,7 @@ vim.wo.number = true
 
 require('plugins')
 require('mason-config')
-require('jdtls')
+require('lsp_setup')
 require('code-completion')
 require('file-explorer')
 require('custom-keys')
