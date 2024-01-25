@@ -30,6 +30,7 @@ FloaTerm
 New Terminal: \ft
 Terminal Toggle: \t
 Close Terminal: C-d
+Command mode: C-\C-n
 
 Telescope
 ------------------------------
