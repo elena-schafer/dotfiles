@@ -34,5 +34,6 @@ require("lazy").setup({
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 	{ "nvim-telescope/telescope.nvim", tag = '0.1.4', dependencies = "nvim-lua/plenary.nvim"},
-	{ "folke/noice.nvim", event = "VeryLazy", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", } }
+	{ "folke/noice.nvim", event = "VeryLazy", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", } },
+	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 })
