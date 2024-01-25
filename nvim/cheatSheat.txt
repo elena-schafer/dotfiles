@@ -1,3 +1,11 @@
+AutoComplete
+------------------------------
+Open: C-<Space>
+Close: C-e
+Next/Prev Item: <Tab> / S-<Tab>
+Scroll Docs: C-f / C-S-f
+Confirm: <Enter>
+
 Window Switching
 ------------------------------
 Next Window: C-ww
@@ -7,6 +15,9 @@ NVimTree
 ------------------------------
 Toggle Tree: C-n
 Help: g?
+Close File: <BackSpace>
+Open Vertical Split: C-v
+Next/Prev git marker: [c / ]c
 
 Tabs
 ------------------------------
