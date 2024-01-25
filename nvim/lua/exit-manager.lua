@@ -2,7 +2,6 @@
 local function close_nvim_tree_on_exit(data)
 
 	-- determine if we should close nvim-tree here
-	-- If no other buffers are active, and none are modified, we close
 	local windows = vim.fn.getwininfo()
 	local non_essential_count = 1 --currently closing window counts as 1
 	--print(#windows)
