@@ -38,4 +38,6 @@ require("lazy").setup({
 	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 	"danilamihailov/beacon.nvim",
 	"stevearc/aerial.nvim",
+	"RRethy/vim-illuminate",
+	"ggandor/leap.nvim",
 })
