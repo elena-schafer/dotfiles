@@ -6,6 +6,10 @@ Next/Prev Item: <Tab> / S-<Tab>
 Scroll Docs: C-f / C-S-f
 Confirm: <Enter>
 
+aerial Navigation
+------------------------------
+Next/Prev symbol: [a / ]a
+
 Window Switching
 ------------------------------
 Next Window: C-ww

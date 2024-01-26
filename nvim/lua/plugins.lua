@@ -37,4 +37,5 @@ require("lazy").setup({
 	{ "folke/noice.nvim", event = "VeryLazy", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", } },
 	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 	"danilamihailov/beacon.nvim",
+	"stevearc/aerial.nvim",
 })
