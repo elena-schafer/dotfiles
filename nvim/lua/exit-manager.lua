@@ -6,11 +6,14 @@ local function close_nvim_tree_on_exit(data)
 	local non_essential_count = 1 --currently closing window counts as 1
 	--print(#windows)
 	for i, win in pairs(windows) do
---		print("test " .. vim.bo[vim.api.nvim_win_get_buf(win.winid)].filetype)
+		--print("test " .. vim.bo[vim.api.nvim_win_get_buf(win.winid)].filetype)
 		if vim.bo[vim.api.nvim_win_get_buf(win.winid)].filetype == "noice" then
 			non_essential_count = non_essential_count + 1
 		end
 		if vim.bo[vim.api.nvim_win_get_buf(win.winid)].filetype == "NvimTree" then
+			non_essential_count = non_essential_count + 1
+		end
+		if vim.bo[vim.api.nvim_win_get_buf(win.winid)].filetype == "aerial" then
 			non_essential_count = non_essential_count + 1
 		end
 	end
