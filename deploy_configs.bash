@@ -1,4 +1,9 @@
 #!/bin/bash
 
 # Deploy nvim configs to standard location
-ln -s ~/programming/Personal_Configs/nvim ~/.config/
+ln -s $(realpath $(dirname $0))/nvim ~/.config/
+
+rm ~/.zshrc
+ln -s $(realpath $(dirname $0))/zsh/.zshrc ~/
+
+#echo $(realpath $(dirname $0))
