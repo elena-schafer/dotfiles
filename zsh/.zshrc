@@ -42,6 +42,7 @@ antigen use oh-my-zsh
 
 # Load plugins
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle colored-man-pages
 # This one should always be last
 antigen bundle zsh-users/zsh-syntax-highlighting
 
