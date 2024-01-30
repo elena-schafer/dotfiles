@@ -18,7 +18,7 @@ end
 vim.keymap.set('n', '<leader>q', closeBuffer, {})
 
 --floaterm keybinds
-map('n', '<leader>ft', [[:FloatermNew<CR>]], {})
+--map('n', '<leader>ft', [[:FloatermNew<CR>]], {})
 map('n', '<leader>t', [[:FloatermToggle<CR>]], {})
 --map('n', '<M->', [[:FloatermNext<CR>]], {})
 --map('n', '<M->', [[:FloatermPrev<CR>]], {})
@@ -32,3 +32,14 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 --Leap keybinds
 vim.keymap.set('n', 'F', '<Plug>(leap-backward)', {})
+
+--TODO-Comments keybinds
+vim.keymap.set("n", "]t", function()
+  require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+
+vim.keymap.set("n", "[t", function()
+  require("todo-comments").jump_prev()
+end, { desc = "Previous todo comment" })
+map('n', '<leader>ft', [[:TodoTelescope<CR>]], {})
+

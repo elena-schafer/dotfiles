@@ -31,7 +31,6 @@ Buffer Close: \q
 
 FloaTerm
 ------------------------------
-New Terminal: \ft
 Terminal Toggle: \t
 Close Terminal: C-d
 Command mode: C-\C-n
@@ -45,3 +44,8 @@ Search Help: \fh
 Close: C-c (insert), <Esc> (normal mode)
 Next Item: C-n, <Down>
 Prev Item: C-p, <Up>
+
+TODO-Comments
+------------------------------
+Next/Prev marker: ]t / [t
+Telescope search todos: \ft
