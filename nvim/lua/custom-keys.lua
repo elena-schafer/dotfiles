@@ -31,7 +31,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 --Leap keybinds
-vim.keymap.set('n', 'F', '<Plug>(leap-backward)', {})
+vim.keymap.set('n', 'S', '<Plug>(leap-backward)', {})
 
 --TODO-Comments keybinds
 vim.keymap.set("n", "]t", function()
