@@ -85,3 +85,6 @@ vim.keymap.set(
 	"<cmd>lua require('spider').motion('b')<CR>",
 	{ desc = "Spider-b" }
 )
+
+--dirbuf keybinds
+map('n', '<leader>d', [[:Dirbuf ]], {})
