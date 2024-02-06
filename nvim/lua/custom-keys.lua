@@ -7,14 +7,29 @@ map('n', '<C-n>', [[:NvimTreeToggle<CR>]], {})
 map('n', '[b', [[:BufferLineCyclePrev<CR>]], {})
 map('n', ']b', [[:BufferLineCycleNext<CR>]], {})
 map('n', '<leader>bp', [[:BufferLineTogglePin<CR>]], {})
-function closeBuffer () 
-	vim.api.nvim_buf_delete(0, {})
-	--local bufferline = require('bufferline')
-	--if (#bufferline.get_elements().elements == 1) then
-	--end
+
+local function sleep(a)
+    local sec = tonumber(os.clock() + a); 
+    while (os.clock() < sec) do 
+    end 
 end
---map('n', '<leader>q', [[:e#<bar>bd #<CR>]], {}) --change to more complex function to allow closing nvim when all edit buffers are closed
-						--currently just reopens the alternative file
+
+local function closeBuffer ()
+  local bufferline = require('bufferline')
+  if (#bufferline.get_elements().elements ~= 1) then
+    bufferline.cycle(-1)
+    bufferline.close_in_direction(1)
+  else
+    vim.api.nvim_buf_delete(0, {})
+    vim.cmd([[enew]])
+    --bufferline.go_to(#bufferline.get_elements().elements)
+    --sleep(1)
+    --vim.cmd([[lua require('bufferline').close_others()]])
+    --bufferline.close_others()
+    --bufferline.close_in_direction(-1)
+  end
+  --vim.cmd([[ <Cmd>BufferLine<CR> ]])
+end
 vim.keymap.set('n', '<leader>q', closeBuffer, {})
 
 --floaterm keybinds
