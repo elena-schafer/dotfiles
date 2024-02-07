@@ -40,6 +40,5 @@ require("lazy").setup({
 	"stevearc/aerial.nvim",
 	"RRethy/vim-illuminate",
 	"ggandor/leap.nvim",
-	"chrisgrieser/nvim-spider",
 	"elihunter173/dirbuf.nvim",
 })
