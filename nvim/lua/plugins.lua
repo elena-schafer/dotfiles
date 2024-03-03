@@ -41,4 +41,5 @@ require("lazy").setup({
 	"RRethy/vim-illuminate",
 	"ggandor/leap.nvim",
 	"elihunter173/dirbuf.nvim",
+	"mfussenegger/nvim-jdtls",
 })
