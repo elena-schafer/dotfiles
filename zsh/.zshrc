@@ -35,6 +35,7 @@ PROMPT='%(?.%F{blue}✓%f.💩) %F{green}%*%f %F{blue}%/%f %F{red}${vcs_info_msg
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
+
 source $HOME/antigen.zsh
     
 # Load the oh-my-zsh's library
@@ -48,3 +49,5 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Tell antigen that you're done
 antigen apply
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
