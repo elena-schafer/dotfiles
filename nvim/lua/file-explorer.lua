@@ -12,6 +12,15 @@ require("nvim-tree").setup({
  -- end,
   disable_netrw = true,
   hijack_cursor = true,
+  view = {
+    width = 45
+  },
+  hijack_directories = { enable = false },
+  diagnostics = {
+    enable = true,
+    show_on_dirs = true,
+    severity = { min = vim.diagnostic.severity.ERROR }
+  }
 })
 
 -- we must manually script startup on open
