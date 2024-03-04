@@ -77,9 +77,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
     bufmap('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<cr>')
 
     -- Selects a code action available at the current cursor position
-    bufmap('n', '<leader>la', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+    -- bufmap('n', '<leader>la', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+    vim.keymap.set({ "v", "n" }, "<leader>la", require("actions-preview").code_actions)
   end
 })
 
 --dirbuf keybinds
 map('n', '<leader>d', [[:Dirbuf ]], {})
+
