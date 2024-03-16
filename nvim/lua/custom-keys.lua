@@ -8,27 +8,22 @@ map('n', '[b', [[:BufferLineCyclePrev<CR>]], {})
 map('n', ']b', [[:BufferLineCycleNext<CR>]], {})
 map('n', '<leader>bp', [[:BufferLineTogglePin<CR>]], {})
 
-local function sleep(a)
-    local sec = tonumber(os.clock() + a); 
-    while (os.clock() < sec) do 
-    end 
-end
-
 local function closeBuffer ()
   local bufferline = require('bufferline')
-  if (#bufferline.get_elements().elements ~= 1) then
-    bufferline.cycle(-1)
-    bufferline.close_in_direction(1)
-  else
-    vim.api.nvim_buf_delete(0, {})
+  local closed_buffer_id = vim.fn.bufnr()
+  local index = bufferline.get_index(closed_buffer_id)
+  local buffer_count = #bufferline.get_elements().elements
+  if buffer_count == 1 then
     vim.cmd([[enew]])
-    --bufferline.go_to(#bufferline.get_elements().elements)
-    --sleep(1)
-    --vim.cmd([[lua require('bufferline').close_others()]])
-    --bufferline.close_others()
-    --bufferline.close_in_direction(-1)
+    bufferline.cycle(1)
+  elseif index == 1 then
+    bufferline.cycle(1)
+  elseif index == buffer_count then
+    bufferline.cycle(-1)
+  else
+    bufferline.cycle(1)
   end
-  --vim.cmd([[ <Cmd>BufferLine<CR> ]])
+  bufferline.unpin_and_close(closed_buffer_id)
 end
 vim.keymap.set('n', '<leader>q', closeBuffer, {})
 

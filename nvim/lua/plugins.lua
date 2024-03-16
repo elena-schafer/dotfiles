@@ -24,7 +24,7 @@ require("lazy").setup({
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/vim-vsnip",
 	{"nvim-tree/nvim-tree.lua", dependencies = "nvim-tree/nvim-web-devicons"},
-	{"akinsho/bufferline.nvim", dependencies = "nvim-tree/nvim-web-devicons"},
+	{"EdgarAlenPoe/bufferline.nvim", dependencies = "nvim-tree/nvim-web-devicons"},
 	"nvim-lualine/lualine.nvim",
 	"windwp/nvim-autopairs",
 	"lewis6991/gitsigns.nvim",
