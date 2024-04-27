@@ -23,7 +23,6 @@ require("lazy").setup({
 	"hrsh7th/cmp-path",
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/vim-vsnip",
-	{"nvim-tree/nvim-tree.lua", dependencies = "nvim-tree/nvim-web-devicons"},
 	{"EdgarAlenPoe/bufferline.nvim", dependencies = "nvim-tree/nvim-web-devicons"},
 	"nvim-lualine/lualine.nvim",
 	"windwp/nvim-autopairs",
@@ -43,4 +42,10 @@ require("lazy").setup({
 	"elihunter173/dirbuf.nvim",
 	"mfussenegger/nvim-jdtls",
 	"aznhe21/actions-preview.nvim",
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    }
 })
