@@ -1,4 +1,5 @@
 vim.wo.number = true
+vim.opt.spell = true
 
 require('plugins')
 require('mason-config')
