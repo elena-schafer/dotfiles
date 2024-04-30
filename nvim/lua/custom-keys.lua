@@ -1,4 +1,7 @@
 local map = vim.api.nvim_set_keymap
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
 
 -- Nvim-Tree keybinds
 map('n', '<C-n>', [[:NvimTreeToggle<CR>]], {})
