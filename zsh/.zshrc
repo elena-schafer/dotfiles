@@ -69,3 +69,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+export VISUAL=nvim
+export EDITOR=nvim
