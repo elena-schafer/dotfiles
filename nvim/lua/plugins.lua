@@ -60,4 +60,5 @@ require("lazy").setup({
         version = "*", -- Pin Neorg to the latest stable release
         config = false,
     },
+	{ "aserowy/tmux.nvim", config = function() return require("tmux").setup() end },
 })
