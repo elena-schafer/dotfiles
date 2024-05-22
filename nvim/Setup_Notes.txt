@@ -1,6 +1,0 @@
-List of manual actions required to setup nvim environment
-------------------------------------------------------------
-xclip - this and a set $DISPLAY required for clipboard support
-nvim - manual installation is required to ensure an up to date version
-Nerdfont - improves look of many plugins
-ripgrep - required for telescope
