@@ -42,17 +42,17 @@ require("lazy").setup({
 	"elihunter173/dirbuf.nvim",
 	"mfussenegger/nvim-jdtls",
 	"aznhe21/actions-preview.nvim",
-    {
-        'stevearc/oil.nvim',
-        opts = {},
-        -- Optional dependencies
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-    },
-    {
-        "vhyrro/luarocks.nvim",
-        priority = 1000,
-        config = true,
-    },
+  {
+			'stevearc/oil.nvim',
+			opts = {},
+			-- Optional dependencies
+			dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+	{
+			"vhyrro/luarocks.nvim",
+			priority = 1000,
+			config = true,
+	},
 	{
 		"epwalsh/obsidian.nvim",
 		version = "*",
