@@ -1,4 +1,4 @@
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "100"
 vim.api.nvim_create_autocmd("fileType", {
 	pattern = {"markdown", "txt"},
 	callback = function (opts)
