@@ -1,2 +1,2 @@
-# Personal_Configs
+# dotfiles
 Config files for various programs (neovim, bash, etc.)
