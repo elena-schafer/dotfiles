@@ -15,7 +15,6 @@ require('sitter')
 require('indent')
 -- tabs must be after color-scheme for it to have correct theme
 require('color-scheme')
-require('tabs')
 require('file-search')
 require('cmd-messages')
 require('todo')
