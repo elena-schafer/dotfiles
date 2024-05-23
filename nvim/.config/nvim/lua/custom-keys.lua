@@ -27,12 +27,6 @@ local function closeBuffer ()
 end
 vim.keymap.set('n', '<leader>q', closeBuffer, {})
 
---floaterm keybinds
---map('n', '<leader>ft', [[:FloatermNew<CR>]], {})
-map('n', '<leader>t', [[:FloatermToggle<CR>]], {})
---map('n', '<M->', [[:FloatermNext<CR>]], {})
---map('n', '<M->', [[:FloatermPrev<CR>]], {})
-
 --Telescope keybinds
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
