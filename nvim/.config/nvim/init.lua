@@ -1,5 +1,6 @@
 vim.wo.number = true
 vim.opt.spell = true
+vim.opt.termguicolors = true
 
 require('plugins')
 require('mason-config')

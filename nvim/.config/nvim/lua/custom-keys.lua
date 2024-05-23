@@ -4,28 +4,19 @@ local map = vim.api.nvim_set_keymap
 map('n', '<C-n>', [[:NvimTreeToggle<CR>]], {})
 
 --BufferLine keybinds
-map('n', '[b', [[:BufferLineCyclePrev<CR>]], {})
-map('n', ']b', [[:BufferLineCycleNext<CR>]], {})
-map('n', '<leader>bp', [[:BufferLineTogglePin<CR>]], {})
-
-local function closeBuffer ()
-  local bufferline = require('bufferline')
-  local closed_buffer_id = vim.fn.bufnr()
-  local index = bufferline.get_index(closed_buffer_id)
-  local buffer_count = #bufferline.get_elements().elements
-  if buffer_count == 1 then
-    vim.cmd([[enew]])
-    bufferline.cycle(1)
-  elseif index == 1 then
-    bufferline.cycle(1)
-  elseif index == buffer_count then
-    bufferline.cycle(-1)
-  else
-    bufferline.cycle(1)
-  end
-  bufferline.unpin_and_close(closed_buffer_id)
-end
-vim.keymap.set('n', '<leader>q', closeBuffer, {})
+map('n', '[b', [[:bp<CR>]], {})
+map('n', ']b', [[:bn<CR>]], {})
+map('n', '<leader>b1', [[:LualineBuffersJump 1<CR>]], {})
+map('n', '<leader>b2', [[:LualineBuffersJump 2<CR>]], {})
+map('n', '<leader>b3', [[:LualineBuffersJump 3<CR>]], {})
+map('n', '<leader>b4', [[:LualineBuffersJump 4<CR>]], {})
+map('n', '<leader>b5', [[:LualineBuffersJump 5<CR>]], {})
+map('n', '<leader>b6', [[:LualineBuffersJump 6<CR>]], {})
+map('n', '<leader>b7', [[:LualineBuffersJump 7<CR>]], {})
+map('n', '<leader>b8', [[:LualineBuffersJump 8<CR>]], {})
+map('n', '<leader>b9', [[:LualineBuffersJump 9<CR>]], {})
+map('n', '<leader>b0', [[:LualineBuffersJump 0<CR>]], {})
+map('n', '<leader>b$', [[:LualineBuffersJump $<CR>]], {})
 
 --Telescope keybinds
 local builtin = require('telescope.builtin')
