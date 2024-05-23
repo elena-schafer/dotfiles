@@ -68,4 +68,5 @@ require("lazy").setup({
 		},
 	},
 	{ "aserowy/tmux.nvim", config = function() return require("tmux").setup() end },
+	{ 'Bekaboo/deadcolumn.nvim' },
 })
