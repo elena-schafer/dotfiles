@@ -6,6 +6,8 @@ map('n', '<C-n>', [[:NvimTreeToggle<CR>]], {})
 --BufferLine keybinds
 map('n', '[b', [[:bp<CR>]], {})
 map('n', ']b', [[:bn<CR>]], {})
+map('n', '<leader>bd', [[:bd<CR>]], {})
+map('n', '<leader>b!', [[:bd!<CR>]], {})
 map('n', '<leader>b1', [[:LualineBuffersJump 1<CR>]], {})
 map('n', '<leader>b2', [[:LualineBuffersJump 2<CR>]], {})
 map('n', '<leader>b3', [[:LualineBuffersJump 3<CR>]], {})

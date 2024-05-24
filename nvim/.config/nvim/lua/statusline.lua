@@ -3,7 +3,7 @@ require("lualine").setup{
 		theme = "catppuccin",
 	},
 	tabline = {
-		lualine_a = {'branch'},
+		lualine_a = {},
 		lualine_b = {{'buffers', mode = 2}},
 		lualine_c = {},
 		lualine_x = {},

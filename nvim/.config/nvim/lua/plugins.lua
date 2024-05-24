@@ -28,6 +28,8 @@ require("lazy").setup({
 	"windwp/nvim-autopairs",
 	"lewis6991/gitsigns.nvim",
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", },
+	--this one must be after treesitter
+	{ "nvim-treesitter/nvim-treesitter-textobjects" },
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
