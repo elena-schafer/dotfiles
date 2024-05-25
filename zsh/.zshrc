@@ -72,3 +72,7 @@ unset __conda_setup
 
 export VISUAL=nvim
 export EDITOR=nvim
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	tmux a -t default &> /dev/null || exec tmux new -s default && exit;
+fi
