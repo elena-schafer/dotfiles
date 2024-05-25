@@ -31,13 +31,3 @@ lspconfig.lua_ls.setup({
     Lua = {}
   }
 })
-
-require('jdtls').start_or_attach({
-	cmd = {'~/.local/share/nvim/mason/bin/jdtls'},
-	root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
-	setting = {
-		java = {
-			signatureHelp = {enabled = true},
-		}
-	}
-})
