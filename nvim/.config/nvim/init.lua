@@ -1,7 +1,4 @@
-vim.wo.number = true
-vim.opt.spell = true
-vim.opt.termguicolors = true
-
+require('options')
 require('plugins')
 require('mason-config')
 require('lsp_setup')
