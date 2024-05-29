@@ -12,18 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
-	"neovim/nvim-lspconfig",
-	"hrsh7th/nvim-cmp",
-	"hrsh7th/cmp-nvim-lsp",
-	"hrsh7th/cmp-nvim-lua",
-	"hrsh7th/cmp-nvim-lsp-signature-help",
-	"hrsh7th/cmp-vsnip",
-	"hrsh7th/cmp-path",
-	"hrsh7th/cmp-buffer",
-	"hrsh7th/vim-vsnip",
-	{"EdgarAlenPoe/bufferline.nvim", dependencies = "nvim-tree/nvim-web-devicons"},
 	"nvim-lualine/lualine.nvim",
 	"windwp/nvim-autopairs",
 	"lewis6991/gitsigns.nvim",
@@ -32,6 +20,7 @@ require("lazy").setup({
 	{ "nvim-treesitter/nvim-treesitter-textobjects" },
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "xiyaowong/transparent.nvim", lazy = false, },
 	{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 	{ "nvim-telescope/telescope.nvim", tag = '0.1.4', dependencies = "nvim-lua/plenary.nvim"},
 	{ "folke/noice.nvim", event = "VeryLazy", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", } },
@@ -40,7 +29,6 @@ require("lazy").setup({
 	"stevearc/aerial.nvim",
 	"RRethy/vim-illuminate",
 	"ggandor/leap.nvim",
-	"mfussenegger/nvim-jdtls",
 	"aznhe21/actions-preview.nvim",
   {
 			'stevearc/oil.nvim',
@@ -71,7 +59,6 @@ require("lazy").setup({
 	{ "aserowy/tmux.nvim", config = function() return require("tmux").setup() end },
 	{ 'Bekaboo/deadcolumn.nvim' },
 	{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
-	{ 'mfussenegger/nvim-dap-python' },
   {
     'numToStr/Comment.nvim',
     opts = {
@@ -79,4 +66,16 @@ require("lazy").setup({
     },
     lazy = false,
   },
+	-- lsp plugins
+	{'williamboman/mason.nvim'},
+	{'williamboman/mason-lspconfig.nvim'},
+	{'neovim/nvim-lspconfig'},
+	{'L3MON4D3/LuaSnip'},
+	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-nvim-lua",
+	"hrsh7th/cmp-nvim-lsp-signature-help",
+	"hrsh7th/cmp-vsnip",
+	"hrsh7th/cmp-path",
+	"hrsh7th/cmp-buffer",
+	"hrsh7th/vim-vsnip",
 })
