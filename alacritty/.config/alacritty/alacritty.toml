@@ -2,7 +2,9 @@ import = [
   "~/.config/alacritty/catppuccin-mocha.toml"
 ]
 
-window.startup_mode = "Maximized"
+[window]
+startup_mode = "Maximized"
+opacity = 0.8
 
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular"}
