@@ -3,7 +3,7 @@ local map = vim.api.nvim_set_keymap
 -- Nvim-Tree keybinds
 map('n', '<C-n>', [[:NvimTreeToggle<CR>]], {})
 
---BufferLine keybinds
+--Buffer keybinds
 map('n', '[b', [[:bp<CR>]], {})
 map('n', ']b', [[:bn<CR>]], {})
 map('n', '<leader>bd', [[:bd<CR>]], {})
