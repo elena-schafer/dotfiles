@@ -24,6 +24,11 @@ require("lazy").setup({
 	},
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = 'make' },
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.4", dependencies = "nvim-lua/plenary.nvim"},
+	{
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
+	},
 
 	---------------------------------------
 	-- LSP
@@ -76,14 +81,14 @@ require("lazy").setup({
 	{ "xiyaowong/transparent.nvim", lazy = false, },
 	{ "folke/noice.nvim", event = "VeryLazy", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", } },
 
-	---------------------------------------
-	-- Dependencies
-	---------------------------------------
-	{
-			"vhyrro/luarocks.nvim",
-			priority = 1000,
-			config = true,
-	},
+  ---------------------------------------
+	 -- Dependencies
+	 ---------------------------------------
+	-- {
+	-- 		"vhyrro/luarocks.nvim",
+	-- 		priority = 1000,
+	-- 		config = true,
+	-- },
 
 	---------------------------------------
 	-- Extras
