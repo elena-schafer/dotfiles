@@ -83,7 +83,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 		echo $COUNT
 		for i in $(seq 0 $COUNT); do
 			if ! tmux list-clients 2>/dev/null | grep -q "term$i"; then
-				tmux a -t term$i
+				tmux a -t term$i && exit;
 			else
 				exec tmux new -s term$((i + 1)) && exit;
 			fi
