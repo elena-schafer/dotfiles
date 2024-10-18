@@ -1,8 +1,5 @@
 local map = vim.api.nvim_set_keymap
 
--- Nvim-Tree keybinds
-map('n', '<C-n>', [[:NvimTreeToggle<CR>]], {})
-
 --Buffer keybinds
 map('n', '[b', [[:bp<CR>]], {})
 map('n', ']b', [[:bn<CR>]], {})
@@ -27,9 +24,6 @@ vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
 vim.keymap.set('n', '<leader>fl', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-
---Leap keybinds
-vim.keymap.set('n', 'S', '<Plug>(leap-backward)', {})
 
 --TODO-Comments keybinds
 vim.keymap.set("n", "]t", function()
