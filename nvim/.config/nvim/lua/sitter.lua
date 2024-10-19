@@ -1,6 +1,6 @@
 require("nvim-treesitter.configs").setup {
-  ensure_installed = { "c", "lua", "bash", "java", "json5", "latex", "python", "sql", "vim", "vimdoc", },
-  highlight = { enable = true, },
+  ensure_installed = { "c", "lua", "bash", "java", "json5", "python", "sql", "vim", "vimdoc", },
+  highlight = { enable = true, disable = { "latex" } }, --latex exception is needed for certain vimtex features to work
   incremental_selection = { enable = true, },
   indent = { enable = true, },
   textobjects = {
