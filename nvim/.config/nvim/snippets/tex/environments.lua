@@ -1,3 +1,15 @@
+local function tableContains(table, values)
+	local contains = false
+	for i, entry in ipairs(table) do
+		for j, val in ipairs(values) do
+			if entry == val then
+				contains = true
+			end
+		end
+	end
+	return contains
+end
+
 return {
 	s(
 		{
@@ -10,14 +22,23 @@ return {
 		},
 		fmta(
 			[[
-				$<>$ <>
+				$<>$<><>
 			]],
 			{
 				i(1),
-				i(0),
+				f( function (argnode_text, parent)
+					vim.print(argnode_text)
+					if tableContains(argnode_text, {',', '.', '?', '-', ' '}) then
+						return ''
+					else
+						return ' '
+					end
+				end, {2}),
+				i(2),
 			}
 		)
 	),
+
 	s(
 		{
 			trig = "dk",
@@ -40,6 +61,7 @@ return {
 			}
 		)
 	),
+
 	s(
 		{
 			trig = "beg",
