@@ -1,13 +1,14 @@
 AutoComplete
 ------------------------------
-Open: C-<Space>
-Close: C-e
-Next/Prev Item: <Tab> / S-<Tab>
-Scroll Docs: C-f / C-S-f
-Confirm: <Enter>
+Open: 
+Close: 
+Next/Prev Item: C-n / C-p
+Scroll Docs: C-f / C-b
+Confirm: C-y
 
 aerial Navigation
 ------------------------------
+Open: \n
 Next/Prev symbol: [a / ]a
 
 Window Switching
@@ -15,30 +16,21 @@ Window Switching
 Next Window: C-ww
 Window Movement: C-w(hjkl)
 
-NVimTree
+Oil
 ------------------------------
-Toggle Tree: C-n
-Help: g?
-Close File: <BackSpace>
-Open Vertical Split: C-v
-Next/Prev git marker: [c / ]c
+Open parent directory: -
 
-Tabs
+Harpoon
 ------------------------------
-Buffer Prev: [b
-Buffer Next: ]b
-Buffer Close: \q
-
-FloaTerm
-------------------------------
-Terminal Toggle: \t
-Close Terminal: C-d
-Command mode: C-\C-n
+Add File: \a
+Toggle Menu: \h
+Jump to nth: \n
 
 Telescope
 ------------------------------
 File Name Search: \ff
-Live Grep: \fg
+Seach Git Files: \fg
+Live Grep: \fl
 Search Buffers: \fb
 Search Help: \fh
 Close: C-c (insert), <Esc> (normal mode)
@@ -49,3 +41,20 @@ TODO-Comments
 ------------------------------
 Next/Prev marker: ]t / [t
 Telescope search todos: \ft
+
+LSP
+------------------------------
+Show Documentation: \ld
+Goto definition: \lg
+Rename: \lr
+Code Actions at location: \la
+
+DAP
+------------------------------
+Toggle Breakpoint: \db
+Continue: \dc
+Step Into: F10
+Step Over: F11
+Step Out: F12
+Run Last: \dr
+Set breakpoint with log message: \dl

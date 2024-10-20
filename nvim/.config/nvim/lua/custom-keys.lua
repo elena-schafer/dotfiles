@@ -1,22 +1,5 @@
 local map = vim.api.nvim_set_keymap
 
---Buffer keybinds
-map('n', '[b', [[:bp<CR>]], {})
-map('n', ']b', [[:bn<CR>]], {})
-map('n', '<leader>bd', [[:bd<CR>]], {})
-map('n', '<leader>b!', [[:bd!<CR>]], {})
-map('n', '<leader>b1', [[:LualineBuffersJump 1<CR>]], {})
-map('n', '<leader>b2', [[:LualineBuffersJump 2<CR>]], {})
-map('n', '<leader>b3', [[:LualineBuffersJump 3<CR>]], {})
-map('n', '<leader>b4', [[:LualineBuffersJump 4<CR>]], {})
-map('n', '<leader>b5', [[:LualineBuffersJump 5<CR>]], {})
-map('n', '<leader>b6', [[:LualineBuffersJump 6<CR>]], {})
-map('n', '<leader>b7', [[:LualineBuffersJump 7<CR>]], {})
-map('n', '<leader>b8', [[:LualineBuffersJump 8<CR>]], {})
-map('n', '<leader>b9', [[:LualineBuffersJump 9<CR>]], {})
-map('n', '<leader>b0', [[:LualineBuffersJump 0<CR>]], {})
-map('n', '<leader>b$', [[:LualineBuffersJump $<CR>]], {})
-
 --Telescope keybinds
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
