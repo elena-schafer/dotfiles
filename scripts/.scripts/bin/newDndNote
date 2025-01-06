@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#Read 1720910290-sessionnotes to get last ptolus note number
+number=$(cat ~/notes/1720910290-sessionnotes.md | grep "Ptolus_[0-9][0-9]" | tail -n 1 | awk -F "(_|]])" '{print $2}')
+
+#increment number
+number=$((10#$number + 1))
+
+#We can't handle three digit numbers for now
+grep -E "^1[0-9][0-9]" <<< "$number" > /dev/null && { echo "Reached 100 notes, congrats, please update the script"; exit 1; }
+#prepend 0 to numbers that are single digit
+grep -E "^[0-9]$" - <<< "$number" > /dev/null && number="0$number"
+
+#Call nvim to create note, and save it
+nvim --headless -c "ObsidianNew Ptolus_$number" -c "wq" > /dev/null 2>&1
+
+#Get the name of the note
+name=$(ls ~/notes | grep "ptolus$number" -)
+
+#Append new link to session notes index
+echo "[[$name|Ptolus_$number]]" >> ~/notes/1720910290-sessionnotes.md
+
+#Open new note
+cd ; nvim ~/notes/$name ~/notes/1720910290-sessionnotes.md -c "lua require(\"harpoon\"):list():add()" -c "bnext" -c "lua require(\"harpoon\"):list():add()" -c "bprev"
