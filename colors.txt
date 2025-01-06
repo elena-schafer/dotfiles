@@ -1,0 +1,7 @@
+Base #1C2030 28 32 48
+Blue #8c9fe9 140 154 234
+Dark blue #6974B0 105 116 176
+lavender #b4befe 180 190 254
+sapphire #74c7ec
+pink #f5c2e7
+white #e0e0ff 224 224 255
