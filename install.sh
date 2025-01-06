@@ -5,8 +5,10 @@ stow -D nvim
 stow -D zsh
 stow -D tmux
 stow -D alacritty
+stow -D greetd -t /
 
 stow nvim
 stow zsh
 stow tmux
 stow alacritty
+stow greetd -t /
