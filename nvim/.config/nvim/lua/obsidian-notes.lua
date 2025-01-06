@@ -7,7 +7,6 @@ require("obsidian").setup({
       path = "~/notes",
     },
   },
-	notes_subdir = "notes",
 	mappings = {
 		["gf"] = {
       action = function()
@@ -17,7 +16,7 @@ require("obsidian").setup({
     },
 	},
   daily_notes = {
-    folder = "notes/daily",
+    folder = "daily",
   },
 	-- Optional, customize how note IDs are generated given an optional title.
   ---@param title string|?

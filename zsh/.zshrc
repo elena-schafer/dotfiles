@@ -53,7 +53,7 @@ antigen apply
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # add miniconda to path
-export PATH="$PATH:$HOME/miniconda3/condabin"
+export PATH="$PATH:$HOME/.scripts/bin:$HOME/miniconda3/condabin"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
