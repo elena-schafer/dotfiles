@@ -3,9 +3,8 @@
 
 stow -D ags
 stow -D alacritty
-stow -D greetd -t /
 stow -D hyfetch
-stow -D hyperland
+stow -D hyprland
 stow -D nvim
 stow -D rofi
 stow -D scripts
@@ -14,9 +13,8 @@ stow -D zsh
 
 stow ags
 stow alacritty
-stow greetd -t /
 stow hyfetch
-stow hyperland
+stow hyprland
 stow nvim
 stow rofi
 stow scripts
