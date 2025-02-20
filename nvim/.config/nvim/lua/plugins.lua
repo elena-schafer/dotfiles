@@ -93,6 +93,20 @@ require("lazy").setup({
 	{ "xiyaowong/transparent.nvim", lazy = false, },
 	{ "folke/noice.nvim", event = "VeryLazy", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", } },
 
+	---------------------------------------
+	-- Notes
+	---------------------------------------
+	{ "zk-org/zk-nvim" },
+	{
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+    opts = {},
+	},
+	{
+		"tadmccorkle/markdown.nvim",
+		ft = "markdown", -- or 'event = "VeryLazy"'
+	}
+
   ---------------------------------------
 	 -- Dependencies
 	 ---------------------------------------
@@ -105,19 +119,4 @@ require("lazy").setup({
 	---------------------------------------
 	-- Extras
 	---------------------------------------
-	{
-		"epwalsh/obsidian.nvim",
-		version = "*",
-		lazy = true,
-		event = {
-      "BufReadPre " .. vim.fn.expand "~" .. "/notes/**.md",
-      "BufNewFile " .. vim.fn.expand "~" .. "/notes/**.md",
-    },
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"hrsh7th/nvim-cmp",
-			"nvim-telescope/telescope.nvim",
-			"nvim-treesitter",
-		},
-	},
 })
