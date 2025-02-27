@@ -1,10 +1,10 @@
-local helpers = require('luasnip-helper-funcs')
+local helpers = require('lua.luasnip-helper-funcs')
 local get_visual = helpers.get_visual
 local in_mathzone = helpers.in_mathzone
 
 
 return {
-	s({trig="--", dscr="The hyperref package's href{}{} command (for url links)"},
+	s({ trig = "--", dscr = "The hyperref package's href{}{} command (for url links)" },
 		fmta(
 			[[- [ ] <> ]],
 			{
