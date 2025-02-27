@@ -43,6 +43,12 @@ commands.add("ZkAddLink", function(options)
 	end)
 end)
 
+-- Command example from zk-nvim that lists orphan notes
+commands.add("ZkOrphans", function(options)
+  options = vim.tbl_extend("force", { orphan = true }, options or {})
+  zk.edit(options, { title = "Zk Orphans" })
+end)
+
 require("markdown").setup({
 	mappings = false,
 })
@@ -73,6 +79,9 @@ vim.api.nvim_set_keymap("n", "<leader>zd", "<cmd>ZkNew { dir = \"daily\" }<CR>",
 
 -- Open notes.
 vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
+
+-- Open orphan notes
+vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkOrphans<CR>", opts)
 
 -- Open notes associated with the selected tags.
 -- vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
