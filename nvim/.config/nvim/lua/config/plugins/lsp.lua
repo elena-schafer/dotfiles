@@ -14,6 +14,23 @@ return {
 				function(server_name)
 					require("lspconfig")[server_name].setup({})
 				end,
+
+				["lua_ls"] = function()
+					require("lspconfig").lua_ls.setup({
+						settings = {
+							Lua = {
+								telemetry = { enable = false },
+								runtime = { version = "LuaJIT" },
+								diagnostics = { globals = { "vim" } },
+								workspace = {
+									checkThirdParty = false,
+									library = vim.api.nvim_get_runtime_file("", true),
+								},
+								hint = { enable = true },
+							},
+						},
+					})
+				end
 			})
 
 			-- Add autocommands and keybinds when lsp attaches to buffer
