@@ -14,6 +14,9 @@ return {
 			vim.keymap.set('n', '<leader>fl', builtin.live_grep, {})
 			vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 			vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+			vim.keymap.set("n", "<leader>en", function()
+				builtin.find_files({ cwd = vim.fn.stdpath("config") })
+			end)
 		end,
 	},
 }
