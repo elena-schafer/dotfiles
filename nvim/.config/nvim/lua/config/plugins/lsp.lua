@@ -5,6 +5,15 @@ return {
 		dependencies = {
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/nvim-lspconfig" },
+			{
+				"folke/lazydev.nvim",
+				ft = "lua",
+				opts = {
+					library = {
+						{ path = "${3rd}/luv/library", works = { "vim%.uv" } }
+					}
+				},
+			},
 		},
 		config = function()
 			require("mason").setup()
@@ -47,6 +56,11 @@ return {
 							end
 						})
 					end
+					vim.keymap.set("n", "grn", vim.lsp.buf.rename)
+					vim.keymap.set("n", "gra", vim.lsp.buf.code_action)
+					vim.keymap.set("n", "grr", vim.lsp.buf.references)
+					vim.keymap.set("n", "gri", vim.lsp.buf.implementation)
+					vim.keymap.set("n", "g0", vim.lsp.buf.document_symbol)
 				end
 			})
 		end
@@ -81,47 +95,47 @@ return {
 			require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
 		end,
 	},
-	{
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-			{ "hrsh7th/cmp-nvim-lua" },             -- ?
-			{ "hrsh7th/cmp-nvim-lsp-signature-help" }, -- ?
-			{ "hrsh7th/cmp-vsnip" },                -- ?
-			{ "hrsh7th/cmp-path" },                 -- ?
-			{ "hrsh7th/cmp-buffer" },               -- ?
-		},
-		config = function()
-			vim.opt.completeopt = { 'menuone', 'noselect', 'noinsert', 'preview' }
-			vim.opt.shortmess = vim.opt.shortmess + { c = true }
-
-			local cmp = require 'cmp'
-			cmp.setup({
-				preselect = cmp.PreselectMode.None,
-
-				mapping = {
-					['<C-b>'] = cmp.mapping.scroll_docs(-4),
-					['<C-f>'] = cmp.mapping.scroll_docs(4),
-					['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-					['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
-					['<Leader>c'] = cmp.mapping.complete(),
-					['<C-y>'] = cmp.mapping.confirm({
-						behavior = cmp.ConfirmBehavior.Insert,
-						select = true,
-					}),
-				},
-				-- sources are the installed sources that can be used for code suggestions
-				sources = {
-					{ name = 'path' },
-					{ name = 'nvim_lsp',               keyword_length = 3 },
-					{ name = 'nvim_lsp_signature_help' },
-					{ name = 'nvim_lua',               keyword_length = 2 },
-					{ name = 'buffer',                 keyword_length = 2 },
-					{ name = 'luasnip',                keyword_length = 2 },
-				}
-			})
-		end
-	},                                 -- ?
-	{ "aznhe21/actions-preview.nvim" }, -- ?
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	dependencies = {
+	-- 		{ "hrsh7th/cmp-nvim-lua" },             -- ?
+	-- 		{ "hrsh7th/cmp-nvim-lsp-signature-help" }, -- ?
+	-- 		{ "hrsh7th/cmp-vsnip" },                -- ?
+	-- 		{ "hrsh7th/cmp-path" },                 -- ?
+	-- 		{ "hrsh7th/cmp-buffer" },               -- ?
+	-- 	},
+	-- 	config = function()
+	-- 		vim.opt.completeopt = { 'menuone', 'noselect', 'noinsert', 'preview' }
+	-- 		vim.opt.shortmess = vim.opt.shortmess + { c = true }
+	--
+	-- 		local cmp = require 'cmp'
+	-- 		cmp.setup({
+	-- 			preselect = cmp.PreselectMode.None,
+	--
+	-- 			mapping = {
+	-- 				['<C-b>'] = cmp.mapping.scroll_docs(-4),
+	-- 				['<C-f>'] = cmp.mapping.scroll_docs(4),
+	-- 				['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+	-- 				['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+	-- 				['<Leader>c'] = cmp.mapping.complete(),
+	-- 				['<C-y>'] = cmp.mapping.confirm({
+	-- 					behavior = cmp.ConfirmBehavior.Insert,
+	-- 					select = true,
+	-- 				}),
+	-- 			},
+	-- 			-- sources are the installed sources that can be used for code suggestions
+	-- 			sources = {
+	-- 				{ name = 'path' },
+	-- 				{ name = 'nvim_lsp',               keyword_length = 3 },
+	-- 				{ name = 'nvim_lsp_signature_help' },
+	-- 				{ name = 'nvim_lua',               keyword_length = 2 },
+	-- 				{ name = 'buffer',                 keyword_length = 2 },
+	-- 				{ name = 'luasnip',                keyword_length = 2 },
+	-- 			}
+	-- 		})
+	-- 	end
+	-- },                                 -- ?
+	-- { "aznhe21/actions-preview.nvim" }, -- ?
 }
 --LSP keybinds
 -- vim.api.nvim_create_autocmd('LspAttach', {
