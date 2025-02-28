@@ -1,10 +1,10 @@
 return {
 	-- ?
 	{
-		"neovim/mason-lspconfig.nvim",
+		"williamboman/mason-lspconfig.nvim",
 		dependencies = {
 			{ "williamboman/mason.nvim" },
-			{ "williamboman/nvim-lspconfig" },
+			{ "neovim/nvim-lspconfig" },
 			{
 				"folke/lazydev.nvim",
 				ft = "lua",
