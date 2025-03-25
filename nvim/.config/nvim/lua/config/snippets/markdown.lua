@@ -1,4 +1,4 @@
-local helpers = require('lua.luasnip-helper-funcs')
+local helpers = require('config.helpers.luasnip-helper-funcs')
 local get_visual = helpers.get_visual
 local in_mathzone = helpers.in_mathzone
 
