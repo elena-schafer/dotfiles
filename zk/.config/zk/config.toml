@@ -1,0 +1,11 @@
+[notebook]
+dir = "~/notes"
+
+[group.daily]
+# Directories listed here will automatically use this group when creating notes.
+paths = ["daily"]
+
+[group.daily.note]
+filename = "{{format-date now '%d-%m-%Y'}}"
+extension = "md"
+template = "daily.md"

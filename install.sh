@@ -11,6 +11,7 @@ stow -D rofi
 stow -D scripts
 stow -D tmux
 stow -D zsh
+stow -D zk
 
 stow ags
 stow alacritty
@@ -22,3 +23,4 @@ stow rofi
 stow scripts
 stow tmux
 stow zsh
+stow zk
