@@ -53,17 +53,6 @@ return {
 				zk.edit(options, { title = "Zk Orphans" })
 			end)
 
-			require("markdown").setup({
-				mappings = false,
-			})
-
-			require("render-markdown").setup({
-				latex = {
-					enabled = false,
-				}
-			})
-
-
 			-- note more keybinds can be found in the file type plugin for markdown
 			local opts = { noremap = true, silent = false }
 
@@ -94,10 +83,17 @@ return {
 	{
 		'MeanderingProgrammer/render-markdown.nvim',
 		dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-		opts = {},
+		opts = {
+			latex = {
+				enabled = false,
+			}
+		},
 	},
 	{
 		"tadmccorkle/markdown.nvim",
 		ft = "markdown", -- or 'event = "VeryLazy"'
+		opts = {
+			mappings = false
+		}
 	},
 }
