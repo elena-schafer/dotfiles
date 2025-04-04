@@ -1,25 +1,29 @@
-require('options')
-require('plugins')
-require('mason-config')
-require('lsp_setup')
-require('code-completion')
-require('file-explorer')
-require('custom-keys')
-require('statusline')
-require('pairing')
-require('git-integration')
-require('sitter')
-require('indent')
--- tabs must be after color-scheme for it to have correct theme
-require('color-scheme')
-require('file-search')
-require('cmd-messages')
-require('todo')
-require("highlight-beacon")
-require('navigation')
-require('quick-motion')
-require('obsidian-notes')
-require('dead-col')
-require('dap-setup')
-require('file-switcher')
-require('aliases')
+require('config.options')
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+	{ import = "config/plugins" },
+	--{ "danilamihailov/beacon.nvim" },
+	--{ "RRethy/vim-illuminate" },
+	--{ "Bekaboo/deadcolumn.nvim" },
+	-- {
+	-- 		"vhyrro/luarocks.nvim",
+	-- 		priority = 1000,
+	-- 		config = true,
+	-- },
+})
+
+require('config.aliases')
+require('config.custom-keys')

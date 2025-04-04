@@ -55,6 +55,9 @@ antigen apply
 # add costum scripts and miniconda to path
 export PATH="$PATH:$HOME/.scripts/bin:$HOME/miniconda3/condabin"
 
+# add export for zk-notes for neovim
+export ZK_NOTEBOOK_DIR="$HOME/notes"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
