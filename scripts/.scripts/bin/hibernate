@@ -1,0 +1,7 @@
+
+#!/usr/bin/env bash
+# Check BAT0 (internal battery) level
+# Check BAT1 (external battery) Level
+# Check if BAT0 (internal battery) is charging
+# Check if BAT1 (external battery) is charging
+# if both are below 5% and discharging then hibernate
