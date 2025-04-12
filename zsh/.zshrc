@@ -52,7 +52,7 @@ antigen apply
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# add costum scripts and miniconda to path
+# add custom scripts and miniconda to path
 export PATH="$PATH:$HOME/.scripts/bin:$HOME/miniconda3/condabin"
 
 # add export for zk-notes for neovim
