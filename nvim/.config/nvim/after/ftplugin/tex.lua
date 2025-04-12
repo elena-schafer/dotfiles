@@ -1,0 +1,11 @@
+-- if we're in a tex file in the notes directory
+if vim.fn.expand("$HOME/notes/latex") == vim.fn.expand("%:p:h") then
+	-- Start continuous compilation
+	vim.cmd("VimtexCompile")
+	-- if nvim rpc server hasn't been started, start it
+	if not started then
+		started = true
+		-- Start the nvim rpc server
+		vim.fn.serverstart(vim.fn.expand("$HOME/.local/share/nvim/zktex"))
+	end
+end
