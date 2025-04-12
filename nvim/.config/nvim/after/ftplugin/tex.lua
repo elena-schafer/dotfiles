@@ -7,5 +7,6 @@ if vim.fn.expand("$ZK_NOTEBOOK_DIR/latex") == vim.fn.expand("%:p:h") then
 		started = true
 		-- Start the nvim rpc server
 		vim.fn.serverstart(vim.fn.expand("$HOME/.local/share/nvim/zktex"))
+		vim.fn.jobstart("vimtex-layout")
 	end
 end
