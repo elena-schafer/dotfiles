@@ -3,7 +3,7 @@ FileName=$(echo $1 | awk -F '//|\\.' '{print $2}')
 FileType=$(echo $1 | awk -F '//|\\.' '{print $3}')
 
 if [ "$FileType" = "md" ]; then
-	nvim --remote-send "<C-\><C-N>:n /home/elena/notes/$FileName.md<CR>" --server ~/.local/share/nvim/zktex	
+	nvim --remote-send "<C-\><C-N>:n $ZK_NOTEBOOK_DIR/$FileName.md<CR>" --server ~/.local/share/nvim/zktex	
 elif [ "$FileType" = "tex" ]; then
-	nvim --remote-send "<C-\><C-N>:n /home/elena/notes/latex/$FileName.tex<CR>" --server ~/.local/share/nvim/zktex	
+	nvim --remote-send "<C-\><C-N>:n $ZK_NOTEBOOK_DIR/latex/$FileName.tex<CR>" --server ~/.local/share/nvim/zktex	
 fi

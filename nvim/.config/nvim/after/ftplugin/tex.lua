@@ -1,5 +1,5 @@
 -- if we're in a tex file in the notes directory
-if vim.fn.expand("$HOME/notes/latex") == vim.fn.expand("%:p:h") then
+if vim.fn.expand("$ZK_NOTEBOOK_DIR/latex") == vim.fn.expand("%:p:h") then
 	-- Start continuous compilation
 	vim.cmd("VimtexCompile")
 	-- if nvim rpc server hasn't been started, start it
