@@ -11,6 +11,7 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
+			"micangl/cmp-vimtex",
 		},
 		config = function()
 			local luasnip = require("luasnip")
@@ -66,6 +67,7 @@ return {
 				sources = cmp.config.sources({
 					{ name = 'nvim_lsp' },
 					{ name = 'luasnip' },
+					{ name = 'vimtex', }
 				}, {
 					{ name = 'buffer' },
 				})
