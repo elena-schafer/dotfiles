@@ -13,7 +13,7 @@ end
 return {
 	s(
 		{
-			trig = "mk",
+			trig = "mm",
 			dscr = "inline math",
 			regTrig = false,
 			wordTrig = true,
@@ -26,14 +26,14 @@ return {
 			]],
 			{
 				i(1),
-				f( function (argnode_text, parent)
+				f(function(argnode_text, parent)
 					vim.print(argnode_text)
-					if tableContains(argnode_text, {',', '.', '?', '-', ' '}) then
+					if tableContains(argnode_text, { ',', '.', '?', '-', ' ' }) then
 						return ''
 					else
 						return ' '
 					end
-				end, {2}),
+				end, { 2 }),
 				i(2),
 			}
 		)
@@ -41,8 +41,8 @@ return {
 
 	s(
 		{
-			trig = "dk",
-			dscr = "inline math",
+			trig = "ee",
+			dscr = "equation environment",
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
@@ -50,9 +50,32 @@ return {
 		},
 		fmta(
 			[[
-				\[
+				\begin{equation*}
 					<>
-				\]
+				\end{equation*}
+				<>
+			]],
+			{
+				i(1),
+				i(0),
+			}
+		)
+	),
+
+	s(
+		{
+			trig = "aa",
+			dscr = "align environment",
+			regTrig = false,
+			wordTrig = true,
+			priority = 100,
+			snippetType = "snippet"
+		},
+		fmta(
+			[[
+				\begin{align*}
+					<>
+				\end{align*}
 				<>
 			]],
 			{

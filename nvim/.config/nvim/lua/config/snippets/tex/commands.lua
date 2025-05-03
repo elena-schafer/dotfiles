@@ -14,6 +14,15 @@ return {
 			}
 		)
 	),
+	s({ trig = "bb", dscr = "Blackboard bold" },
+		fmta(
+			[[\mathbb{<>} <>]],
+			{
+				i(1, "Letter"),
+				i(0),
+			}
+		)
+	),
 	s({ trig = "tii", dscr = "Expands 'tii' into LaTeX's textit{} command." },
 		fmta("\\textit{<>} ",
 			{
