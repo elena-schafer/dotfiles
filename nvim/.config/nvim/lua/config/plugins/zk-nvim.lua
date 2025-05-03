@@ -47,6 +47,15 @@ return {
 				end)
 			end)
 
+			-- Custom command to sync notes with github
+			commands.add("ZkSync", function(options)
+				commitMessage = "Commit at" .. vim.fn.strftime('%d %b %Y %H:%M:%S %p')
+				vim.api.nvim_command('tabnew | term')
+				vim.api.nvim_input('i cd /home/elena/notes ; git commit -am "' ..
+					commitMessage ..
+					'" ; git fetch ; git merge origin/main -s ort -Xours -m "Merge remote-tracking branch origin/main" ; git push\n')
+			end)
+
 			-- Command example from zk-nvim that lists orphan notes
 			commands.add("ZkOrphans", function(options)
 				options = vim.tbl_extend("force", { orphan = true }, options or {})
@@ -67,8 +76,10 @@ return {
 			vim.api.nvim_set_keymap("n", "<leader>zd", "<cmd>ZkNew { dir = \"daily\" }<CR>", opts)
 			-- Search daily notes
 
-			-- Create a new note after asking for its title.
-			-- vim.api.nvim_set_keymap("n", "<leader>zcc", "<cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
+			-- Sync notes with github
+			vim.api.nvim_set_keymap("n", "<leader>zr", "<cmd>ZkSync<CR>", opts)
+
+
 
 			-- Open notes.
 			vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)

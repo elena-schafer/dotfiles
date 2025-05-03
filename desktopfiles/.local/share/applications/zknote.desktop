@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=zkNote
+Exec=zknote-helper %u
+MimeType=x-scheme-handler/zknote;
+NoDisplay=false
+Terminal=false

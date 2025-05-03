@@ -1,6 +1,9 @@
 return {
 	{
 		"L3MON4D3/LuaSnip",
+		opts = {
+			enable_autosnippets = true,
+		},
 		config = function()
 			local ls = require("luasnip")
 
@@ -15,13 +18,13 @@ return {
 			-- 	end
 			-- end, { silent = true })
 
-			vim.keymap.set({ "i", "s" }, "<S-Tab>", function() ls.jump(-1) end, { silent = true })
-
-			vim.keymap.set({ "i", "s" }, "<C-E>", function()
-				if ls.choice_active() then
-					ls.change_choice(1)
-				end
-			end, { silent = true })
+			-- vim.keymap.set({ "i", "s" }, "<S-Tab>", function() ls.jump(-1) end, { silent = true })
+			--
+			-- vim.keymap.set({ "i", "s" }, "<C-E>", function()
+			-- 	if ls.choice_active() then
+			-- 		ls.change_choice(1)
+			-- 	end
+			-- end, { silent = true })
 
 			ls.setup({
 				update_events = 'TextChanged,TextChangedI'

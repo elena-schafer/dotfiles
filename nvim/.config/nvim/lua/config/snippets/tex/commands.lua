@@ -1,4 +1,4 @@
-local helpers = require('nvim.config.nvim.lua.config.helpers.luasnip-helper-funcs')
+local helpers = require('config.helpers.luasnip-helper-funcs')
 local get_visual = helpers.get_visual
 local in_mathzone = helpers.in_mathzone
 
@@ -10,6 +10,15 @@ return {
 			{
 				i(1, "url"),
 				i(2, "display name"),
+				i(0),
+			}
+		)
+	),
+	s({ trig = "bb", dscr = "Blackboard bold" },
+		fmta(
+			[[\mathbb{<>} <>]],
+			{
+				i(1, "Letter"),
 				i(0),
 			}
 		)

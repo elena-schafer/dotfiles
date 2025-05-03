@@ -1,39 +1,6 @@
 return {
 	s(
 		{
-			trig = ";a",
-			dscr = "general environment snippet",
-			regTrig = false,
-			wordTrig = true,
-			priority = 100,
-			snippetType = "snippet"
-		},
-		t("\\alpha ")
-	),
-	s(
-		{
-			trig = ";b",
-			dscr = "general environment snippet",
-			regTrig = false,
-			wordTrig = true,
-			priority = 100,
-			snippetType = "snippet"
-		},
-		t("\\beta ")
-	),
-	s(
-		{
-			trig = ";g",
-			dscr = "general environment snippet",
-			regTrig = false,
-			wordTrig = true,
-			priority = 100,
-			snippetType = "snippet"
-		},
-		t("\\gamma ")
-	),
-	s(
-		{
 			trig = "ff",
 			dscr = "fraction",
 			regTrig = false,
@@ -49,5 +16,27 @@ return {
 				i(0),
 			}
 		)
+	),
+	s(
+		{
+			trig = "cup",
+			dscr = "fraction",
+			regTrig = false,
+			wordTrig = true,
+			priority = 100,
+			snippetType = "snippet"
+		},
+		t("\\cup ")
+	),
+	s(
+		{
+			trig = "cap",
+			dscr = "fraction",
+			regTrig = false,
+			wordTrig = true,
+			priority = 100,
+			snippetType = "snippet"
+		},
+		t("\\cap ")
 	),
 }

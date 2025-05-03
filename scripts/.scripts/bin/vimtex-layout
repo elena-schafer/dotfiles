@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Check for zathura instance on all workspaces
+# sleep if we can't find it and check again
+workspace=$(hyprctl clients | awk 'BEGIN {RS="Window"; FS="\n" } /.*zathura.*/ {print $6}' | awk '{print $2}')
+until [[ "$workspace" != "" ]]; do
+	sleep 0.1
+	workspace=$(hyprctl clients | awk 'BEGIN {RS="Window"; FS="\n" } /.*zathura.*/ {print $6}')
+done
+# find the alacritty instance on the same window
+# if it's on the right use swapwithmaster in master layout (or swapsplit in dwindle layout)
+pos=$(hyprctl clients | awk "BEGIN { RS=\"Window\"; FS=\"\\n\" } /.*Alacritty.*workspace: $workspace .*/ {print \$0}" | awk 'BEGIN { FS=" |," } /at:/ { print $2 }')
+echo $pos
+if [[ "$pos" -gt 13 ]]; then
+	echo test
+	hyprctl dispatch layoutmsg swapwithmaster
+fi
