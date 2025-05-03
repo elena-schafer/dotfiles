@@ -51,7 +51,7 @@ return {
 			commands.add("ZkSync", function(options)
 				commitMessage = "Commit at" .. vim.fn.strftime('%d %b %Y %H:%M:%S %p')
 				vim.api.nvim_command('tabnew | term')
-				vim.api.nvim_input('i cd /home/elena/notes ; git commit -am "' ..
+				vim.api.nvim_input('i cd /home/elena/notes ; git add -A ; git commit -m "' ..
 					commitMessage ..
 					'" ; git fetch ; git merge origin/main -s ort -Xours -m "Merge remote-tracking branch origin/main" ; git push\n')
 			end)
