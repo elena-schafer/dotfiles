@@ -13,6 +13,7 @@ return function()
 	-- 	return "battery-level-" .. math.floor(p * 10) * 10 .. "-symbolic"
 	-- end)
 	return Widget.Box({
+		class_name = "BarBatteryLevel",
 		Widget.Label({
 			label = value
 		}),
