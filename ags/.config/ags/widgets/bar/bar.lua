@@ -22,7 +22,7 @@ return function(monitor)
 			}),
 			Widget.Box({
 				class_name = "center",
-				Workspaces(),
+				Workspaces(0),
 			}),
 			Widget.Box({
 				halign = "END",
