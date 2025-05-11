@@ -1,10 +1,7 @@
 @use "sass:color";
 
-$bg: #1C2030;
-$accent1: #8C9FE9;
-$accent2: #B4BEFE;
-$fg: #E0E0FF;
 $radius: 10px;
+$font-size: 12pt;
 
 window.bar {
   background-color: transparent;
@@ -12,8 +9,10 @@ window.bar {
 	margin-right: 9px;
 	margin-bottom: 9px;
   color: $fg;
+  font-size: $font-size;
 
   box.left, box.center, box.right {
+    padding: 0 5px 0 5px;
     border-radius: 10px;
     background-color: $bg;
 
@@ -27,6 +26,13 @@ window.bar {
 
     .battery {
       margin: 0 5px 0 5px;
+    }
+
+    .tray {
+      button {
+        all: unset;
+        margin: 0 5px 0 5px;
+      }
     }
   }
 }
