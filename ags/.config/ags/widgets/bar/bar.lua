@@ -2,6 +2,7 @@ local Widget = require("astal.gtk3.widget")
 local Anchor = require("astal.gtk3").Astal.WindowAnchor
 local BatteryLevel = require("widgets.bar.battery")
 local Clock = require("widgets.bar.clock")
+local Systray = require("widgets.bar.tray")
 
 return function(monitor)
 	return Widget.Window({
@@ -24,7 +25,7 @@ return function(monitor)
 			Widget.Box({
 				halign = "END",
 				class_name = "right",
-				-- systray(),
+				Systray(),
 				BatteryLevel(),
 				Clock("%-I:%M %P"),
 			}),
