@@ -1,0 +1,34 @@
+@use "sass:color";
+
+$bg: #1C2030;
+$accent1: #8C9FE9;
+$accent2: #B4BEFE;
+$fg: #E0E0FF;
+$radius: 10px;
+
+window.bar {
+  background-color: transparent;
+	margin-left: 9px;
+	margin-right: 9px;
+	margin-bottom: 9px;
+  color: $fg;
+
+  box.left, box.center, box.right {
+    border-radius: 10px;
+    background-color: $bg;
+
+    
+    .clock {
+      margin: 0 5px 0 5px;
+      button {
+        all: unset;
+      }
+    }
+
+    .battery {
+      margin: 0 5px 0 5px;
+    }
+  }
+}
+
+
