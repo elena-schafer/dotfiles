@@ -4,6 +4,7 @@ local BatteryLevel = require("widgets.bar.battery")
 local Clock = require("widgets.bar.clock")
 local Systray = require("widgets.bar.tray")
 local Wifi = require("widgets.bar.wifi")
+local Workspaces = require("widgets.bar.workspaces")
 
 return function(monitor)
 	return Widget.Window({
@@ -18,10 +19,10 @@ return function(monitor)
 			Widget.Box({
 				halign = "START",
 				class_name = "left",
-				-- Workspaces(),
 			}),
 			Widget.Box({
 				class_name = "center",
+				Workspaces(),
 			}),
 			Widget.Box({
 				halign = "END",
