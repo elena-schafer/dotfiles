@@ -8,15 +8,21 @@ return function()
 	local wifi = bind(network, "wifi")
 
 	return Widget.Box({
-		visible = wifi:as(function(v) return v ~= nil end),
-		wifi:as(
-			function(w)
-				return Widget.Icon({
-					tooltip_text = bind(w, "ssid"):as(tostring),
-					class_name = "wifi",
-					icon = bind(w, "icon-name"),
-				})
-			end
-		),
+		class_name = "wifi",
+		Widget.Button({
+			on_clicked = function()
+				astal.exec("wifi-menu")
+			end,
+			visible = wifi:as(function(v) return v ~= nil end),
+			wifi:as(
+				function(w)
+					return Widget.Icon({
+						tooltip_text = bind(w, "ssid"):as(tostring),
+						class_name = "wifi",
+						icon = bind(w, "icon-name"),
+					})
+				end
+			),
+		})
 	})
 end
