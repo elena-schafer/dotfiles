@@ -18,7 +18,7 @@ return function(format)
 		class_name = "notes",
 		visible = noteState(),
 		Widget.Icon({
-			icon = "folder-notes-symbolic",
+			icon = "document-properties-symbolic",
 		})
 	})
 
