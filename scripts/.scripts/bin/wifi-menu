@@ -11,13 +11,26 @@ elif [[ "$connected" =~ "disabled" ]]; then
 	toggle="󰖩  Enable Wi-Fi"
 fi
 
+# Check if all hardware is rfkilled, and offer airplane mode options
+if rfkill -o SOFT | grep "unblocked" ; then
+	airplane="✈ Enable Airplane Mode"
+	list="$toggle\n$airplane\n$wifi_list"
+else
+	airplane="✈ Disable Airplane Mode"
+	list="$airplane"
+fi
+
 # Use rofi to select wifi network
-chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID: " )
+chosen_network=$(echo -e "$list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID: " )
 # Get name of connection
 read -r chosen_id <<< "${chosen_network:3}"
 
 if [ "$chosen_network" = "" ]; then
 	exit
+elif [ "$chosen_network" = "✈ Enable Airplane Mode" ]; then
+	rfkill block all
+elif [ "$chosen_network" = "✈ Disable Airplane Mode" ]; then
+	rfkill unblock all
 elif [ "$chosen_network" = "󰖩  Enable Wi-Fi" ]; then
 	nmcli radio wifi on
 elif [ "$chosen_network" = "󰖪  Disable Wi-Fi" ]; then
