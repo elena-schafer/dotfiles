@@ -1,0 +1,58 @@
+@use "sass:color";
+
+$radius: 10px;
+$font-size: 12pt;
+
+window.bar {
+  background-color: transparent;
+	margin-left: 9px;
+	margin-right: 9px;
+	margin-bottom: 9px;
+  color: $fg;
+  font-size: $font-size;
+
+  box.left, box.center, box.right {
+    padding: 2px 5px 2px 5px;
+    border-radius: 10px;
+    background-color: $bg;
+
+    
+    .clock {
+      margin: 0 5px 0 5px;
+      button {
+        all: unset;
+      }
+    }
+
+    .battery {
+      margin: 0 5px 0 5px;
+    }
+
+    .tray {
+      button {
+        all: unset;
+        margin: 0 5px 0 5px;
+      }
+    }
+
+
+    .wifi {
+      button {
+        all: unset;
+      }
+    }
+
+    .workspaces {
+
+      button {
+        all:unset;
+        margin: 0 3px 0 3px;
+      }
+      .workspace-focused {
+        color: $accent1;
+      }
+    }
+  }
+}
+
+
