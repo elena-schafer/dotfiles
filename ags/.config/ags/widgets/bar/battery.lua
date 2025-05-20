@@ -17,5 +17,8 @@ return function()
 		Widget.Label({
 			label = value
 		}),
+		Widget.Icon({
+			icon = bind(bat, "icon-name")
+		}),
 	})
 end
