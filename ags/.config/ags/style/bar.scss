@@ -2,6 +2,7 @@
 
 $radius: 10px;
 $font-size: 12pt;
+$spacer: 6px;
 
 window.bar {
   background-color: transparent;
@@ -11,37 +12,19 @@ window.bar {
   color: $fg;
   font-size: $font-size;
 
-  box.left, box.center, box.right {
+  box.left {
+    padding: 2px $spacer 2px 0;
+    border-radius: 10px;
+    background-color: $bg;
+    .notes {
+      margin: 0 0 0 $spacer
+    }
+  }
+
+  box.center {
     padding: 2px 5px 2px 5px;
     border-radius: 10px;
     background-color: $bg;
-
-    
-    .clock {
-      margin: 0 5px 0 5px;
-      button {
-        all: unset;
-      }
-    }
-
-    .battery {
-      margin: 0 5px 0 5px;
-    }
-
-    .tray {
-      button {
-        all: unset;
-        margin: 0 5px 0 5px;
-      }
-    }
-
-
-    .wifi {
-      button {
-        all: unset;
-      }
-    }
-
     .workspaces {
 
       button {
@@ -52,6 +35,40 @@ window.bar {
         color: $accent1;
       }
     }
+  }
+
+  box.right {
+    padding: 2px 0 2px $spacer;
+    border-radius: 10px;
+    background-color: $bg;
+
+    
+    .clock {
+      margin: 0 $spacer 0 0;
+      button {
+        all: unset;
+      }
+    }
+
+    .battery {
+      margin: 0 $spacer 0 0;
+    }
+
+    .tray {
+      button {
+        all: unset;
+        margin: 0 $spacer 0 0;
+      }
+    }
+
+
+    .wifi {
+      margin: 0 3px 0 0;
+      button {
+        all: unset;
+      }
+    }
+
   }
 }
 
