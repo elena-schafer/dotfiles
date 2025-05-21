@@ -41,21 +41,10 @@ return {
 					['<C-b>'] = cmp.mapping.scroll_docs(-4),
 					['<C-f>'] = cmp.mapping.scroll_docs(4),
 					['<Tab>'] = cmp.mapping(function(fallback)
-						if luasnip.expandable() then
-							luasnip.expand()
-						elseif luasnip.locally_jumpable() then
+						if luasnip.locally_jumpable() then
 							luasnip.jump(1)
-						elseif cmp.visible() then
-							if #cmp.get_entries() == 1 then
-								cmp.confirm({ select = true })
-							else
-								cmp.select_next_item()
-							end
-						elseif has_words_before() then
+						elseif not cmp.visible() and has_words_before() then
 							cmp.complete()
-							if #cmp.get_entries() == 1 then
-								cmp.confirm({ select = true })
-							end
 						else
 							fallback()
 						end
