@@ -1,4 +1,4 @@
-return {
+return {}, {
 	s(
 		{
 			trig = "ff",
@@ -6,7 +6,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		fmta(
 			"\\frac{<>}{<>} <>",
@@ -24,7 +23,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\cup ")
 	),
@@ -35,7 +33,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\cap ")
 	),

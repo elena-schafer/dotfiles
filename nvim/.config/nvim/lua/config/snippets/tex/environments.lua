@@ -10,7 +10,7 @@ local function tableContains(table, values)
 	return contains
 end
 
-return {
+return {}, {
 	s(
 		{
 			trig = "mm",
@@ -18,7 +18,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		fmta(
 			[[
@@ -46,7 +45,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		fmta(
 			[[
@@ -69,7 +67,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		fmta(
 			[[
@@ -92,7 +89,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		fmta(
 			[[

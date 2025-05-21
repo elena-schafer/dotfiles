@@ -1,10 +1,9 @@
-return {
+return {}, {
 	s(
 		{
 			trig = ";a",
 			dscr = "Lower case greek alpha",
 			wordTrig = true,
-			snippetType = "snippet"
 		},
 		t("\\alpha ")
 	),
@@ -15,7 +14,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\beta ")
 	),
@@ -26,7 +24,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\gamma ")
 	),
@@ -37,7 +34,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\delta ")
 	),
@@ -48,7 +44,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\epsilon ")
 	),
@@ -59,7 +54,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\theta ")
 	),
@@ -70,7 +64,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\lambda ")
 	),
@@ -81,7 +74,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\pi ")
 	),
@@ -92,7 +84,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\sigma ")
 	),
@@ -103,7 +94,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\Gamma ")
 	),
@@ -114,7 +104,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		t("\\Delta ")
 	),

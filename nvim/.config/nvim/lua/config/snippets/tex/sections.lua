@@ -1,4 +1,4 @@
-return {
+return {}, {
 	s(
 		{
 			trig = "#",
@@ -6,7 +6,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 100,
-			snippetType = "snippet"
 		},
 		fmta(
 			[[ \section*{<>} <> ]],
@@ -20,7 +19,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 200,
-			snippetType = "snippet"
 		},
 		fmta(
 			[[ \subsection*{<>} <> ]],
@@ -34,7 +32,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 300,
-			snippetType = "snippet"
 		},
 		fmta(
 			[[ \subsubsection*{<>} <> ]],
@@ -48,7 +45,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 400,
-			snippetType = "snippet"
 		},
 		fmta(
 			[[ \paragraph*{<>} <> ]],
@@ -62,7 +58,6 @@ return {
 			regTrig = false,
 			wordTrig = true,
 			priority = 500,
-			snippetType = "snippet"
 		},
 		fmta(
 			[[ \subparagraph*{<>} <> ]],
