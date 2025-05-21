@@ -3,7 +3,7 @@ local get_visual = helpers.get_visual
 local in_mathzone = helpers.in_mathzone
 
 
-return {
+return {}, {
 	s({ trig = "hr", dscr = "The hyperref package's href{}{} command (for url links)" },
 		fmta(
 			[[\href{<>}{<>} <>]],

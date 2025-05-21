@@ -10,7 +10,7 @@ local function tableContains(table, values)
 	return contains
 end
 
-return {
+return {}, {
 	s(
 		{
 			trig = "mm",
